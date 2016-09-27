@@ -63,7 +63,9 @@ module.exports = {
 		"one-var": "off",
 		"one-var-declaration-per-line": "off",
 		"operator-assignment": "off",
-		"operator-linebreak": ["warn", "before"],
+		"operator-linebreak": ["warn", "after", {
+			"overrides": { "?": "before", ":": "before" },
+		}],
 		"padded-blocks": ["warn", "never"],
 		"quote-props": "off",
 		"quotes": ["warn", "double", "avoid-escape"],
