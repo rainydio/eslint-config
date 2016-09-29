@@ -24,7 +24,7 @@ module.exports = {
 		"linebreak-style": ["warn", "unix"],
 		"lines-around-comment": "off",
 		"max-depth": "off",
-		"max-len": ["warn", 80, 1],
+		"max-len": "off",
 		"max-lines": "off",
 		"max-nested-callbacks": "off",
 		"max-params": "off",
