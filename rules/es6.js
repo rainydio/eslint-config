@@ -30,7 +30,7 @@ module.exports = {
 		"prefer-reflect": "off",
 		"prefer-rest-params": "warn",
 		"prefer-spread": "warn",
-		"prefer-template": "warn",
+		"prefer-template": "off",
 		"require-yield": "off", // breaks async
 		"rest-spread-spacing": "warn",
 		"sort-imports": "off",
