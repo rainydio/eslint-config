@@ -27,13 +27,15 @@ module.exports = {
 			"allowNamedFunctions": true,
 		}],
 		"prefer-const": "warn",
-		"prefer-reflect": "off",
+		"prefer-destructuring": "off",
+		"prefer-numeric-literals": "warn",
 		"prefer-rest-params": "warn",
 		"prefer-spread": "warn",
 		"prefer-template": "off",
 		"require-yield": "off", // breaks async
 		"rest-spread-spacing": "warn",
 		"sort-imports": "off",
+		"symbol-description": "warn",
 		"template-curly-spacing": "warn",
 		"yield-star-spacing": ["warn", {
 			"before": true,

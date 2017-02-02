@@ -1,27 +1,47 @@
 {
   "name": "@rainydio/eslint-config",
-  "version": "1.3.3",
+  "version": "2.0.0-beta4",
   "description": "Eslint configuration",
   "files": [
-    "node.js",
-    "node-babel.js",
+    "core",
+    "babel.js",
     "browser.js",
-    "browser-babel.js",
-    "rules"
+    "commonjs.js",
+    "index.js",
+    "jest.js",
+    "react.js",
+    "standard.js"
   ],
+  "scripts": {
+    "test": "eslint-find-rules test.js --unused"
+  },
   "publishConfig": {
     "access": "public"
   },
   "author": "Dmitry Tyschenko",
   "license": "ISC",
   "devDependencies": {
-    "eslint": ">=3.5.0"
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.14.1",
+    "eslint-find-rules": "^1.14.3",
+    "eslint-plugin-babel": "^4.0.1",
+    "eslint-plugin-jest": "^1.0.2",
+    "eslint-plugin-react": "^6.9.0"
   },
   "peerDependencies": {
-    "eslint": ">=3.5.0"
+    "eslint": ">=3.14.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "pkg-conf": "^2.0.0"
+  },
   "repository": "github:rainydio/node-eslint-config.git",
   "bugs": "https://github.com/rainydio/node-eslint-config/issues",
-  "homepage": "https://github.com/rainydio/node-eslint-config#readme"
+  "homepage": "https://github.com/rainydio/node-eslint-config#readme",
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": "./index.js"
+  }
 }

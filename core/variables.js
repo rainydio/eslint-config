@@ -7,12 +7,12 @@ module.exports = {
 		"no-delete-var": "warn",
 		"no-label-var": "warn",
 		"no-restricted-globals": "off",
-		"no-shadow": ["warn", {
-			"allow": ["err"],
-		}],
 		"no-shadow-restricted-names": "error",
-		"no-undef": "warn",
+		"no-shadow": ["warn", {
+			"allow": ["err", "_"],
+		}],
 		"no-undef-init": "warn",
+		"no-undef": "warn",
 		"no-undefined": "off",
 		"no-unused-vars": "warn",
 		"no-use-before-define": "warn",
