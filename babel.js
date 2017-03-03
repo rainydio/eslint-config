@@ -3,7 +3,7 @@
 module.exports = {
 	extends: [
 		require.resolve("./standard"),
-		require.resolve("./core/es6"),
+		require.resolve("./es6"),
 	],
 	parserOptions: {
 		sourceType: "module",

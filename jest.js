@@ -2,11 +2,10 @@
 
 module.exports = {
 	extends: [
-		require.resolve("./core/es6"),
 		require.resolve("./commonjs"),
+		require.resolve("./node"),
 	],
 	env: {
-		es6: true,
 		jest: true,
 	},
 	plugins: [
