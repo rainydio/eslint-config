@@ -8,7 +8,6 @@ module.exports = {
 	},
 	env: {
 		browser: true,
-		es6: false,
 	},
 	rules: {
 		"comma-dangle": ["error", "never"],

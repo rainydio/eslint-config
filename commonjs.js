@@ -1,9 +1,10 @@
 "use strict";
 
 module.exports = {
-	extends: require.resolve("./standard"),
+	extends: [
+		require.resolve("./browser"),
+	],
 	env: {
-		browser: true,
 		commonjs: true,
 	},
 	globals: {

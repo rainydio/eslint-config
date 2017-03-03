@@ -1,9 +1,13 @@
 "use strict";
 
 module.exports = {
-	extends: require.resolve("./standard"),
+	extends: [
+		require.resolve("./core/es6"),
+		require.resolve("./commonjs"),
+	],
 	env: {
-		"jest": true,
+		es6: true,
+		jest: true,
 	},
 	plugins: [
 		"jest",

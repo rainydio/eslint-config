@@ -9,6 +9,7 @@ module.exports = {
 		ecmaVersion: 8,
 	},
 	env: {
+		es6: true,
 		node: true,
 	},
 };

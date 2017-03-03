@@ -15,25 +15,23 @@ const hasDep = dep => !!(
 );
 
 if (hasDep("browserify") || hasDep("webpack")) {
-	config.extends.push(require.resolve("./browser"));
-
-	if (!hasDep("babel")) {
-		config.extends.push(require.resolve("./commonjs"));
-	}
+	config.extends.push(require.resolve("./commonjs"));
 }
 else {
 	config.extends.push(require.resolve("./node"));
 }
 
-if (hasDep("babel-eslint")) {
-	config.parser = "babel-eslint";
-}
 if (hasDep("babel")) {
 	config.extends.push(require.resolve("./babel"));
+
+	if (hasDep("babel-eslint")) {
+		config.parser = "babel-eslint";
+	}
+	if (hasDep("react")) {
+		config.extends.push(require.resolve("./react"));
+	}
 }
-if (hasDep("react")) {
-	config.extends.push(require.resolve("./react"));
-}
+
 if (hasDep("jest")) {
 	config.extends.push(require.resolve("./jest"));
 }
