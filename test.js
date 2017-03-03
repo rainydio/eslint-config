@@ -5,6 +5,7 @@ const extensions = [
 	"./browser",
 	"./commonjs",
 	"./jest",
+	"./node",
 	"./react",
 	"./standard",
 ].map(require.resolve);

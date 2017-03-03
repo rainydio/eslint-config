@@ -94,6 +94,7 @@ module.exports = {
 				"markers": ["/"],
 			},
 		}],
+		"template-tag-spacing": "warn",
 		"unicode-bom": "error",
 		"wrap-regex": "off",
 	},

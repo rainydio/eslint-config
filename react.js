@@ -1,22 +1,16 @@
 "use strict";
 
 module.exports = {
-	extends: require.resolve("./standard"),
-	parserOptions: {
-		ecmaFeatures: {
-			sourceType: "module",
-			ecmaVersion: 8,
-			experimentalObjectRestSpread: true,
-			jsx: true,
-		},
-	},
+	extends: require.resolve("./babel"),
 	plugins: [
 		"react",
 	],
 	rules: {
 		"react/display-name": "warn",
 		"react/forbid-component-props": "off",
+		"react/forbid-elements": "off",
 		"react/forbid-prop-types": "warn",
+		"react/forbid-foreign-prop-types": "warn",
 		"react/no-array-index-key": "warn",
 		"react/no-children-prop": "error",
 		"react/no-danger": "off",
@@ -45,6 +39,7 @@ module.exports = {
 		"react/sort-comp": "off",
 		"react/sort-prop-types": "off",
 		"react/style-prop-object": "warn",
+		"react/void-dom-elements-no-children": "warn",
 
 		"react/jsx-boolean-value": "warn",
 		"react/jsx-closing-bracket-location": "warn",

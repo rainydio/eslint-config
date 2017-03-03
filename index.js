@@ -1,6 +1,6 @@
 "use strict";
 
-const pkgConf = require("pkg-conf");
+const pkgUp = require("pkg-up");
 
 const config = {
 	extends: [
@@ -8,23 +8,33 @@ const config = {
 	],
 };
 
-const eslintConfig = pkgConf.sync("eslintConfig") || { };
-const env = eslintConfig.env || { };
-const plugins = eslintConfig.plugins || [];
+const pkg = require(pkgUp.sync());
+const hasDep = dep => !!(
+	(pkg.dependencies && dep in pkg.dependencies) ||
+	(pkg.devDependencies && dep in pkg.devDependencies)
+);
 
-if (env.browser && plugins.indexOf("babel") === -1) {
-	config.extends.push(require.resolve("./browser")); // native JS
+if (hasDep("browserify") || hasDep("webpack")) {
+	config.extends.push(require.resolve("./browser"));
+
+	if (!hasDep("babel")) {
+		config.extends.push(require.resolve("./commonjs"));
+	}
 }
-if (env.commonjs) {
-	config.extends.push(require.resolve("./commonjs")); // browserify
+else {
+	config.extends.push(require.resolve("./node"));
 }
-if (plugins.indexOf("babel") !== -1) {
+
+if (hasDep("babel-eslint")) {
+	config.parser = "babel-eslint";
+}
+if (hasDep("babel")) {
 	config.extends.push(require.resolve("./babel"));
 }
-if (plugins.indexOf("react") !== -1) {
+if (hasDep("react")) {
 	config.extends.push(require.resolve("./react"));
 }
-if (plugins.indexOf("jest") !== -1) {
+if (hasDep("jest")) {
 	config.extends.push(require.resolve("./jest"));
 }
 

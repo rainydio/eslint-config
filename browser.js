@@ -6,6 +6,10 @@ module.exports = {
 		sourceType: "script",
 		ecmaVersion: 5,
 	},
+	env: {
+		browser: true,
+		es6: false,
+	},
 	rules: {
 		"comma-dangle": ["error", "never"],
 	},

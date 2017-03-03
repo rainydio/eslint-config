@@ -2,13 +2,6 @@
 
 module.exports = {
 	extends: require.resolve("./standard"),
-	parserOptions: {
-		ecmaFeatures: {
-			sourceType: "module",
-			ecmaVersion: 8,
-			experimentalObjectRestSpread: true,
-		},
-	},
 	env: {
 		"jest": true,
 	},
@@ -16,7 +9,8 @@ module.exports = {
 		"jest",
 	],
 	rules: {
-		"jest/no-exclusive-tests": "warn",
+		"jest/no-disabled-tests": "off",
+		"jest/no-focused-tests": "off",
 		"jest/no-identical-title": "warn",
 	},
 };
