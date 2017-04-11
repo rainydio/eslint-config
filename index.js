@@ -28,7 +28,7 @@ else {
 	config.extends.push(require.resolve("./node"));
 }
 
-if (hasDep("babel")) {
+if (hasDep("babel") || hasDep("babel-cli")) {
 	es6 = true;
 	config.extends.push(require.resolve("./babel"));
 
@@ -43,5 +43,7 @@ if (hasDep("babel")) {
 if (hasDep("jest") && es6) {
 	config.extends.push(require.resolve("./jest"));
 }
+
+console.log(config);
 
 module.exports = config;
