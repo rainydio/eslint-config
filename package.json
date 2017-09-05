@@ -1,6 +1,6 @@
 {
   "name": "@rainydio/eslint-config",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Eslint configuration",
   "files": [
     "core",
@@ -11,7 +11,8 @@
     "jest.js",
     "node.js",
     "react.js",
-    "standard.js"
+    "standard.js",
+    "import.js"
   ],
   "scripts": {
     "test": "eslint-find-rules test.js --unused"

@@ -34,7 +34,7 @@ else {
 			config.extends.push(require.resolve("./node"));
 		}
 
-		config.parserOptions.sourceType = "module";
+		config.extends.push(require.resolve("./import"));
 	}
 	else {
 		es6 = true;

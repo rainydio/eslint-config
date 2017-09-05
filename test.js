@@ -8,14 +8,10 @@ const extensions = [
 	"./node",
 	"./react",
 	"./standard",
+	"./import",
 ].map(require.resolve);
 
 module.exports = {
-	plugins: [
-		"babel",
-		"react",
-		"jest",
-	],
 	extends: [
 		...extensions,
 	],
