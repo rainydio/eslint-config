@@ -15,5 +15,6 @@ module.exports = {
 		"jest/no-disabled-tests": "off",
 		"jest/no-focused-tests": "off",
 		"jest/no-identical-title": "warn",
+		"jest/valid-expect": "warn",
 	},
 };

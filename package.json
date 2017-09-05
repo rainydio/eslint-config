@@ -1,6 +1,6 @@
 {
   "name": "@rainydio/eslint-config",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "description": "Eslint configuration",
   "files": [
     "core",
@@ -22,18 +22,18 @@
   "author": "Dmitry Tyschenko",
   "license": "ISC",
   "dependencies": {
-    "pkg-up": "^1.0.0"
+    "pkg-up": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.16.1",
-    "eslint-find-rules": "^1.14.3",
-    "eslint-plugin-babel": "^4.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jest": "^19.0.1",
-    "eslint-plugin-react": "^6.10.0"
+    "eslint": "^4.6.1",
+    "eslint-find-rules": "^3.1.1",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^21.0.0",
+    "eslint-plugin-react": "^7.3.0"
   },
   "peerDependencies": {
-    "eslint": ">=3.16.1"
+    "eslint": ">=4.6.1"
   },
   "repository": "github:rainydio/node-eslint-config.git",
   "bugs": "https://github.com/rainydio/node-eslint-config/issues",

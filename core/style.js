@@ -2,7 +2,9 @@
 
 module.exports = {
 	rules: {
+		"array-bracket-newline": "off",
 		"array-bracket-spacing": ["warn", "never"],
+		"array-element-newline": "off",
 		"block-spacing": ["warn", "always"],
 		"brace-style": ["warn", "stroustrup", { "allowSingleLine": true }],
 		"camelcase": "warn",
@@ -17,6 +19,7 @@ module.exports = {
 		"func-name-matching": "warn",
 		"func-names": "off",
 		"func-style": "off",
+		"function-paren-newline": ["warn", "multiline"],
 		"id-blacklist": "off",
 		"id-length": "off",
 		"id-match": "off",
@@ -61,6 +64,7 @@ module.exports = {
 		"no-underscore-dangle": "off",
 		"no-unneeded-ternary": "warn",
 		"no-whitespace-before-property": "warn",
+		"nonblock-statement-body-position": ["warn", "beside"],
 		"object-curly-newline": "off",
 		"object-curly-spacing": ["warn", "always", {
 			"objectsInObjects": false,
@@ -74,12 +78,14 @@ module.exports = {
 			"overrides": { "?": "before", ":": "before" },
 		}],
 		"padded-blocks": ["warn", "never"],
+		"padding-line-between-statements": "off",
 		"quote-props": "off",
 		"quotes": ["warn", "double", "avoid-escape"],
 		"require-jsdoc": "off",
 		"semi": ["warn", "always"],
-		"sort-keys": "off",
 		"semi-spacing": ["warn", { "after": true }],
+		"semi-style": ["warn", "last"],
+		"sort-keys": "off",
 		"sort-vars": "off",
 		"space-before-blocks": "warn",
 		"space-before-function-paren": ["warn", {
@@ -94,6 +100,7 @@ module.exports = {
 				"markers": ["/"],
 			},
 		}],
+		"switch-colon-spacing": ["warn", { "after": true, "before": false }],
 		"template-tag-spacing": "warn",
 		"unicode-bom": "error",
 		"wrap-regex": "off",

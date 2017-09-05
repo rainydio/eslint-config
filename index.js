@@ -6,8 +6,9 @@ const config = {
 	extends: [
 		require.resolve("./standard"),
 	],
+	parserOptions: {
+	},
 };
-
 
 const pkg = require(pkgUp.sync());
 const hasDep = dep => !!(
@@ -28,6 +29,10 @@ else {
 	config.extends.push(require.resolve("./node"));
 }
 
+if (hasDep("rollup")) {
+	config.parserOptions.sourceType = "module";
+}
+
 if (hasDep("babel") || hasDep("babel-cli")) {
 	es6 = true;
 	config.extends.push(require.resolve("./babel"));
@@ -43,7 +48,5 @@ if (hasDep("babel") || hasDep("babel-cli")) {
 if (hasDep("jest") && es6) {
 	config.extends.push(require.resolve("./jest"));
 }
-
-console.log(config);
 
 module.exports = config;

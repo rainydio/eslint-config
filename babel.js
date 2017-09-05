@@ -19,10 +19,7 @@ module.exports = {
 	},
 	rules: {
 		"babel/new-cap": "warn",
-		"babel/object-curly-spacing": ["warn", "always", {
-			"objectsInObjects": false,
-			"arraysInObjects": false,
-		}],
+		"babel/object-curly-spacing": "off",
 		"babel/no-invalid-this": "warn",
 		"babel/semi": ["warn", "always"],
 		"babel/no-await-in-loop": "off",
