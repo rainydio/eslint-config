@@ -25,12 +25,21 @@ if (hasDep("browserify") || hasDep("webpack")) {
 	config.extends.push(require.resolve("./commonjs"));
 }
 else {
-	es6 = true;
-	config.extends.push(require.resolve("./node"));
-}
+	if (hasDep("rollup")) {
+		if (hasDep("rollup-plugin-node-resolve")) {
+			config.extends.push(require.resolve("./browser"));
+		}
+		else {
+			es6 = true;
+			config.extends.push(require.resolve("./node"));
+		}
 
-if (hasDep("rollup")) {
-	config.parserOptions.sourceType = "module";
+		config.parserOptions.sourceType = "module";
+	}
+	else {
+		es6 = true;
+		config.extends.push(require.resolve("./node"));
+	}
 }
 
 if (hasDep("babel") || hasDep("babel-cli")) {
