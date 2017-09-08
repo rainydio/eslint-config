@@ -1,6 +1,6 @@
 {
   "name": "@rainydio/eslint-config",
-  "version": "2.2.0",
+  "version": "2.2.2",
   "description": "Eslint configuration",
   "files": [
     "core",

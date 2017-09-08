@@ -26,7 +26,7 @@ if (hasDep("browserify") || hasDep("webpack")) {
 }
 else {
 	if (hasDep("rollup")) {
-		if (hasDep("rollup-plugin-node-resolve")) {
+		if (hasDep("rollup-plugin-commonjs")) {
 			config.extends.push(require.resolve("./browser"));
 		}
 		else {
