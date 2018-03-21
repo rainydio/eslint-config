@@ -42,9 +42,10 @@ else {
 	}
 }
 
-if (hasDep("babel") || hasDep("babel-cli")) {
+if (hasDep("babel") || hasDep("babel-cli") || hasDep("babel-watch")) {
 	es6 = true;
 	config.extends.push(require.resolve("./babel"));
+	config.extends.push(require.resolve("./import"));
 
 	if (hasDep("babel-eslint")) {
 		config.parser = "babel-eslint";

@@ -2,8 +2,6 @@
 
 module.exports = {
 	extends: [
-		require.resolve("./commonjs"),
-		require.resolve("./node"),
 	],
 	env: {
 		jest: true,

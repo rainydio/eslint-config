@@ -25,7 +25,7 @@ module.exports = {
 		"import/no-extraneous-dependencies": "error",
 		"import/no-mutable-exports": "warn",
 
-		"import/unambiguous": "warn",
+		"import/unambiguous": "off",
 		"import/no-commonjs": "warn",
 		"import/no-amd": "warn",
 		"import/no-nodejs-modules": "off",
@@ -33,7 +33,7 @@ module.exports = {
 		"import/first": "warn",
 		"import/no-duplicates": "warn",
 		"import/no-namespace": "off",
-		"import/extensions": ["warn", "always", { js: "never", "jsx": "never" }],
+		"import/extensions": ["warn", "always", { js: "never", "jsx": "never", "mjs": "never" }],
 		"import/order": "warn",
 		"import/newline-after-import": "warn",
 		"import/prefer-default-export": "off",

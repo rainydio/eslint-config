@@ -20,7 +20,7 @@ module.exports = {
 	rules: {
 		"babel/new-cap": "warn",
 		"babel/object-curly-spacing": "off",
-		"babel/no-invalid-this": "warn",
+		"babel/no-invalid-this": "off",
 		"babel/semi": ["warn", "always"],
 		"babel/no-await-in-loop": "off",
 	},
