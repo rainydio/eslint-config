@@ -42,6 +42,14 @@ module.exports = {
 		"import/no-named-default": "warn",
 		"import/no-anonymous-default-export": "off",
 
+		"import/dynamic-import-chunkname": "warn",
+		"import/exports-last": "off",
+		"import/group-exports": "off",
+		"import/no-cycle": "off",
+		"import/no-default-export": "off",
+		"import/no-self-import": "error",
+		"import/no-useless-path-segments": "warn",
+
 		// deprecated
 		"import/imports-first": "off",
 	},

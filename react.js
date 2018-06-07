@@ -47,6 +47,19 @@ module.exports = {
 		"react/style-prop-object": "warn",
 		"react/void-dom-elements-no-children": "warn",
 
+		"react/button-has-type": "warn",
+		"react/destructuring-assignment": "off",
+		"react/forbid-dom-props": "off",
+
+		"react/jsx-child-element-spacing": "off",
+		"react/jsx-curly-brace-presence": "off",
+		"react/jsx-max-depth": "off",
+		"react/jsx-one-expression-per-line": "off",
+		"react/jsx-props-no-multi-spaces": "warn",
+		"react/jsx-sort-default-props": "off",
+		"react/no-access-state-in-setstate": "error",
+		"react/no-this-in-sfc": "error",
+
 		"react/jsx-boolean-value": "warn",
 		"react/jsx-closing-bracket-location": "warn",
 		"react/jsx-closing-tag-location": "warn",
